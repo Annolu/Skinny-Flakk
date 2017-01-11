@@ -1,1 +1,1 @@
-console.log("Hello Word");
+console.log("Skinny Flakk");

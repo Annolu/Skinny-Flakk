@@ -2,6 +2,8 @@ body{
     background-color: lavender;
     text-align: center;
     color: black;
-    font-size: 60px;
+    font-size: 40px;
     font-family: Helvetica;
+    position: relative;
+    top: 50px;
 }
