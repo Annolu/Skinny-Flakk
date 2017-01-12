@@ -154,9 +154,14 @@ header{
 }
 
 .tour-wrapper{
-    min-height: 830px;
     background-color: black;
     margin-top: 0;
+    height: 790px;
+}
+
+.list-of-dates{
+    height: 580px;
+    overflow-y: hidden;
 }
 
 .tour-wrapper h1{
@@ -180,6 +185,8 @@ hr{
     border: 0;
     height: 1px;
     background-color: #777;
+    position: relative;
+    top: 15px;
 }
 
 .date{
@@ -192,30 +199,46 @@ hr{
 .city{
     margin: 55px;
 }
-.buy-button{
-    margin: 0 20px 0 150px;
+
+.btn-success{
+    margin: 0 20px 0 150px;    
+    border: 2px solid #eaeaea;
+    padding: 10px 21px;
+    background-color: black;
+    color: #eaeaea;
+    font-weight: bolder;
+    transition: color 0.2s, background 0.2s;
 }
 
-.sold-out{
+.disabled{
+    margin: 0 20px 0 150px;    
     border: 2px solid #7d0e0e;
-    padding: 10px 41px;
+    padding: 10px 39px;
     color: #7d0e0e;
     text-align: center;
-    min-width: 300px;
+    background-color: black;  
+    font-weight: bolder; 
 }
 
-.buy-cd{
-    border: 2px solid #eaeaea;
-    padding: 15px;
-}
-
-.tour-wrapper p{
-    border: 2px solid #7d0e0e;
-    padding: 8px 0px;
-    color: #7d0e0e;
+.dates-button{
+    padding: 10px 0px;
     text-align: center;
     min-width: 250px;
     display: inline-block;
     margin: 2% 50% 0 39%;
-
 }
+
+.btn-success:hover{
+    color: black;
+    background: #fff;
+    cursor: pointer;
+}
+
+.open-wrapper{
+    height: 1180px;
+}
+
+.open-list{
+    height: 960px;
+}
+
