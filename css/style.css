@@ -26,12 +26,20 @@ header{
 }
 
 .top-menu{
-    height:50px;
+    height: 50px;
     padding: 10px 0;
+    position: fixed;
+    display: block;
+    width: 100%;
+    background: inherit;
+    transition: background 400ms, border-bottom 400ms, margin 400ms, height 400ms, background-color 400ms;
+    
 }
 .top-menu nav{
     float:right;
-    margin-right: 73px;    
+    margin-right: 180px;   
+    position: relative;
+    bottom: 9px;
 }
 
 .top-menu li{
@@ -40,18 +48,23 @@ header{
     padding-left: 25px;
     display: inline-block;
     font-size: 15px;
+    transition: color 400ms;
 }
 
 .top-menu a{
     text-decoration: none;
     color: #666; 
+    font-weight: bold;
+}
+
+.top-menu a:hover{
+    color: #eee; 
 }
 
 .top-menu:after{
     clear: both;
     content: '';
 }
-
 
 .rel-pict{
     background: url("../images/rels-body.png") no-repeat;
@@ -60,8 +73,9 @@ header{
     width: 30%;
     display: block;
     position: absolute;
-    bottom:0;
     left: 255px;
+    top: 100px;
+
 }
 
 .cd-title{
@@ -105,63 +119,70 @@ header{
     list-style-type: none;
     margin: 15px;
     float: left;
-    min-width: 50px;
     position: relative;
-    top: 274px;
+    top: 352px;
     left: 480px;
+}
+
+.icons li:hover{
+    cursor: pointer;
+}
+
+.sm-buttons{
+    height: 30px;
+    -webkit-filter: drop-shadow( 0px 0px 10px #444);
+    filter: drop-shadow( 0px 0px 10px #444);
+    -webkit-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
+    width: 50px;
+    display: inline-block
+}
+
+.sm-buttons:hover{
+    position: relative;
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);    
+    -webkit-filter: drop-shadow( 0px 0px 10px #777);
+    filter: drop-shadow( 0px 5px 10px #777);    
 }
     
 .spotify{
     background: url("../images/spotify-logo-button.svg") no-repeat;
-    height: 30px;
-    -webkit-filter: drop-shadow( 0px 0px 10px #777 );
-            filter: drop-shadow( 0px 0px 10px #777 );
 }
 
 .instagram{
     background: url("../images/instagram-logo.svg") no-repeat;
-    height: 30px;
-    -webkit-filter: drop-shadow( 0px 0px 10px #777 );
-            filter: drop-shadow( 0px 0px 10px #777 );
 }
 
 .iTunes{
     background: url("../images/apple.svg") no-repeat;
-    height: 30px;
-    -webkit-filter: drop-shadow( 0px 0px 10px #777 );
-            filter: drop-shadow( 0px 0px 10px #777 );
 }
 
 .youtube{
     background: url("../images/youtube-logo.svg") no-repeat;
-    height: 30px;
-    -webkit-filter: drop-shadow( 0px 0px 10px #777 );
-            filter: drop-shadow( 0px 0px 10px #777 );
 }
 
 .fb{
     background: url("../images/facebook-social-symbol.svg") no-repeat;
-    height: 30px;
-    -webkit-filter: drop-shadow( 0px 0px 10px #777 );
-            filter: drop-shadow( 0px 0px 10px #777 );
 }
 
 .twitter{
     background: url("../images/twitter-logo-silhouette.svg") no-repeat;
-    height: 30px;
-    -webkit-filter: drop-shadow( 0px 0px 10px #777 );
-            filter: drop-shadow( 0px 0px 10px #777 );
 }
 
 .tour-wrapper{
     background-color: black;
     margin-top: 0;
     height: 790px;
+    transition: height 400ms ease-in-out;
+
 }
 
 .list-of-dates{
     height: 580px;
     overflow-y: hidden;
+    background-color: black;
+    transition: height 400ms ease-in-out;
 }
 
 .tour-wrapper h1{
@@ -210,14 +231,22 @@ hr{
     transition: color 0.2s, background 0.2s;
 }
 
+.btn-success:active {
+outline: none;
+border: none;
+}
+
+.btn-success:focus {outline:0;}
+
 .disabled{
     margin: 0 20px 0 150px;    
     border: 2px solid #7d0e0e;
     padding: 10px 39px;
     color: #7d0e0e;
     text-align: center;
-    background-color: black;  
-    font-weight: bolder; 
+    background-color: black;
+    font-weight: bolder;
+    cursor:not-allowed;
 }
 
 .dates-button{
@@ -242,3 +271,29 @@ hr{
     height: 960px;
 }
 
+.cd-wrapper{
+    height: 800px;
+}
+
+.item{
+    height: 570px;
+}
+
+.center{
+    margin: 0 0;
+    
+    width: 635px;
+    margin-right: 0px;
+}
+
+.top-menu-down{
+    color: #eee;
+    background-color: black;
+    border-bottom: 1px solid #333;
+    margin: -17px 0 0 0;
+    z-index: 2;
+    height: 30px;
+}
+.is-active{
+    color: white;
+}

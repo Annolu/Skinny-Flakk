@@ -6,39 +6,41 @@
     <title>Skynny flakk</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owlcarousel/owl.theme.default.css">    
     
 </head>
 <body>
-    <header>
+    <header name="homeButton">
+        <div class="top-menu" id="topMenu">
+            <nav id="topMenuNav">
+                <ul id="ulLi">
+                    <li><a class="is-active" href="#homeButton">Home</a></li>
+                    <li><a href="#tour">Tour</a></li>
+                    <li><a href="#cds">Shop</a></li>
+                </ul>
+            </nav>
+        </div>
         <div class="header-wrapper">
             <div class="central-panel">
-                <div class="top-menu">
-                    <nav>
-                        <ul>
-                            <li><a href="">Home</a></li>
-                            <li><a href="">Tour</a></li>
-                            <li><a href="">Shop</a></li>
-                        </ul>
-                    </nav>
-                </div>
                 <div class="rel-pict"></div>
                 <div class="cd-title"></div>
                 <div class="white-line"></div>
                 <div class="yadis-para"><p>YA DISPONIBLE</p></div>
                 <div class="icons">
                     <ul>
-                        <li><div class="spotify"></div></li>
-                        <li><div class="iTunes"></div></li>
-                        <li><div class="instagram"></div></li>
-                        <li><div class="youtube"></div></li>
-                        <li><div class="fb"></div></li>
-                        <li><div class="twitter"></div></li>                        
+                        <li><a href="https://play.spotify.com/artist/2IMZYfNi21MGqxopj9fWx8?play=true&utm_source=open.spotify.com&utm_medium=open" target="_blank"><span class="sm-buttons spotify"></span></a></li>
+                        <li><a href="https://itunes.apple.com/us/artist/rels-b/id1132604153" target="_blank"><span class="sm-buttons iTunes"></span></a></li>
+                        <li><a href="https://www.instagram.com/skinnyflakkk/" target="_blank"><span class="sm-buttons instagram"></span></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCzmZtDoRh0zRTTuxiw3zJZg" target="_blank"><div class="sm-buttons youtube"></div></a></li>
+                        <li><a href="https://www.facebook.com/relsbofficial/" target="_blank"><span class="sm-buttons fb"></span></a></li>
+                        <li><a href="https://twitter.com/search?q=rels%20b&src=typd" target="_blank"><span class="sm-buttons twitter"></span></a></li>                        
                     </ul>
                 </div>
             </div>
         </div>
     </header>
-    <section id="tour">
+    <section id="tour" name="tour">
         <div class="tour-wrapper" id="tour-wrapper">
             <div class="central-panel">
                 <h1>TOUR</h1>
@@ -47,7 +49,7 @@
                         <li><span class="date">12 Diciembre </span>
                             <span class="place">RAZZMATAZZ</span>
                             <span class="city">Barcelona, España</span>
-                            <span class="disabled">SOLD-OUT</span>
+                            <button class="disabled">SOLD-OUT</button>
                         </li>
                         <hr>
                         <li><span class="date">12 Diciembre </span>
@@ -122,11 +124,22 @@
             </div>
         </div>    
     </section>
-    <section id="cds"></section>
+    <section id="cds" name="cds">
+        <div class="cd-wrapper">    
+                <div class="owl-carousel owl-theme">
+                    <div class="item"><img src="images/cd-covers/0008369837_10.jpg"></img></div>
+                    <div class="item"><img src="images/cd-covers/a0171313126_10.jpg"></img></div>
+                    <div class="item"><img src="images/cd-covers/Untitled-1.png"></img></div>
+                </div>
+        </div>
+    </section>
     <section id="videos"></section>
     <section id="shop"></section>
     <footer></footer>
-
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script> 
     <script src="js/main.js"></script>
+    
 </body>
 </html>
