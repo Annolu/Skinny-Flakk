@@ -2,12 +2,6 @@ var buttonViewMore= document.getElementById("dates-button");
 var tourWrapper= document.getElementById("tour-wrapper");
 var listOfDates= document.getElementById("list-of-dates");
 var topMenuTabs=document.getElementById("topMenuTabs");
-var headerSectionHeight= document.getElementById("headerSection").offsetHeight;
-var tourSectionHeight= document.getElementById("tourSection").offsetHeight;
-var cdSectionHeight= document.getElementById("cdsSection").offsetHeight;
-var topMenuHeight= document.getElementById("topMenu").offsetHeight;
-
-
 
 // open the "see more dates" tab in the tour section
 
@@ -27,14 +21,11 @@ function openConcerts(){
     }
 }
 
-
-
 $(document).ready(function() {
-// owl carousel    
-    
+// cds owl carousel     
     var owl = $("#owl-demo");
 
-    $('.owl-carousel').owlCarousel({
+    owl.owlCarousel({
         center: true,
         items:2,
         loop:true,
@@ -45,7 +36,7 @@ $(document).ready(function() {
                 items:2
             }
         }
-    });  
+    })
     
 //owl carousel gets linked to the arrows
     
@@ -74,65 +65,66 @@ $(document).ready(function() {
 	    }, 900, 'swing', function () {
 	        window.location.hash = target;
 	    });
-	});
+	})
     
 // video carousel     
-    $('.owl-carousel2').owlCarousel({
+    
+    $('#owl-carousel-video').owlCarousel({
         items:1,
-        merge:true,
+        nav:true,
+        center: true,
         loop:true,
-        margin:10,
         video:true,
-        lazyLoad:true,
-        center:true,
         responsive:{
-            480:{
-                items:2
-            },
             600:{
-                items:4
+                items:2
             }
         }
     })
-
 });
-
-//positions at which the top-menu tabs change colour and show/hide fixed top-menu
 
 $(window).scroll(function() {  
     
-    var distanceFromTop= $(this).scrollTop();    
+    let headerSectionHeight= document.getElementById("headerSection").offsetHeight;
+    let tourSectionHeight= document.getElementById("tourSection").offsetHeight;
+    let cdSectionHeight= document.getElementById("cdsSection").offsetHeight;
+    let topMenuHeight= document.getElementById("topMenu").offsetHeight-50;    
+    let distanceFromTop= $(this).scrollTop();    
     
-    var offsetHeight= headerSection.offsetHeight;    
+    console.log(topMenuHeight)
+       
+//positions at which it shows/hides the fixed top-menu
     
     switch(true){
         case (distanceFromTop<topMenuHeight):
             $('.top-menu').removeClass('top-menu-down');            
             topMenuTabs.children[0].children[0].classList.remove("is-active");
-            break;          
-
-        case (distanceFromTop<headerSectionHeight && distanceFromTop>topMenuHeight):
-            $('.top-menu').addClass('top-menu-down');            
-            go(topMenuTabs.children[0].children[0]);
+            break;   
+        case (distanceFromTop>topMenuHeight):
+            $('.top-menu').addClass('top-menu-down');
             break;
-            
-        case (distanceFromTop<headerSectionHeight+tourSectionHeight &&                        distanceFromTop>headerSectionHeight):
-            go(topMenuTabs.children[1].children[0]);
+    }
+    
+//positions at which the top-menu tabs change colour  
+    
+    switch(true){
+        case (distanceFromTop>topMenuHeight && distanceFromTop<headerSectionHeight):
+            activateTab(topMenuTabs.children[0].children[0]);
             break;
-            
+        case (distanceFromTop<headerSectionHeight+tourSectionHeight &&                              distanceFromTop>headerSectionHeight):
+            activateTab(topMenuTabs.children[1].children[0]);
+            break;
         case (distanceFromTop>tourSectionHeight+headerSectionHeight):
-            go(topMenuTabs.children[2].children[0]);
+            activateTab(topMenuTabs.children[2].children[0]);
             break;
     }
 });
 
 //function that changes the top-menu tabs' colours
 
-function go(tabToActivate){
-    setTimeout(function(){
-            for (var item of topMenuTabs.children){
-                item.children[0].classList.remove("is-active");
-            }
-        tabToActivate.classList.add("is-active");
-    }, 200);
+function activateTab(tabToActivate){
+    for (var item of topMenuTabs.children){
+        item.children[0].classList.remove("is-active");
+    }
+    tabToActivate.classList.add("is-active");
 }

@@ -1,10 +1,9 @@
 body, html {
     height: 100%;
-}
-body{
     font-family: 'Roboto Condensed', sans-serif;
-    margin: 0;
+    margin: 0;    
 }
+
 header{
     height: 96%;
 }
@@ -31,7 +30,7 @@ header{
     display: block;
     width: 100%;
     background: inherit;
-    transition: background 400ms, border-bottom 400ms, margin 400ms, height 400ms, background-color 400ms;
+    transition: background 200ms, border-bottom 200ms, margin 200ms, height 200ms, background-color 200ms;
     
 }
 .top-menu nav{
@@ -65,6 +64,15 @@ header{
     content: '';
 }
 
+.top-menu.top-menu-down{
+    color: #eee;
+    background-color: black;
+    border-bottom: 1px solid #333;
+    margin: -17px 0 0 0;
+    z-index: 2;
+    height: 30px;
+}
+
 .rel-pict{
     background: url("../images/rels-body.png") no-repeat;
     background-size: contain;
@@ -74,7 +82,6 @@ header{
     position: absolute;
     left: 255px;
     top: 76px;
-
 }
 
 .cd-title{
@@ -104,7 +111,7 @@ header{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=0 );
 }
 
-.yadis-para{
+.banner-label{
     color: rgb(244, 244, 244);
     font-size: 33px;
     font-weight: 300;
@@ -114,7 +121,7 @@ header{
     letter-spacing: 9px;
 }
 
-.icons li{
+.header-icons li{
     list-style-type: none;
     margin: 15px;
     float: left;
@@ -123,7 +130,7 @@ header{
     left: 480px;
 }
 
-.icons li:hover{
+.header-icons li:hover{
     cursor: pointer;
 }
 
@@ -174,7 +181,6 @@ header{
     margin-top: 0;
     height: 810px;
     transition: height 400ms ease-in-out;
-
 }
 
 .list-of-dates{
@@ -182,6 +188,14 @@ header{
     overflow-y: hidden;
     background-color: black;
     transition: height 400ms ease-in-out;
+}
+
+.list-of-dates li{
+    display: inline-block;
+    color: #eaeaea;
+    height: 10px;
+    margin: 25px;
+    width: 950px
 }
 
 .tour-wrapper h1{
@@ -192,13 +206,13 @@ header{
     margin: 0 50% 0 44%;
     font-weight: 500;
 }
-
-.list-of-dates li{
+.tour-wrapper h1{
+    color: white;
+    font-size: 53px;
+    padding-top: 47px;
     display: inline-block;
-    color: #eaeaea;
-    height: 10px;
-    margin: 25px;
-    width: 950px
+    margin: 0 50% 0 44%;
+    font-weight: 500;
 }
 
 hr{
@@ -220,7 +234,7 @@ hr{
     margin: 55px;
 }
 
-.btn-success{
+.button{
     margin: 0 20px 0 150px;    
     border: 2px solid #eaeaea;
     padding: 10px 21px;
@@ -228,38 +242,38 @@ hr{
     color: #eaeaea;
     font-weight: bolder;
     transition: color 0.2s, background 0.2s;
+    text-align: center;
+    display: inline-block;
 }
 
-.btn-success:active {
+.button:active{
 outline: none;
 border: none;
 }
 
-.btn-success:focus {outline:0;}
+.button:focus{
+    outline:0;
+}
 
-button.disabled-button{
-    margin: 0 20px 0 150px;    
+.button.button-success:hover{
+    color: black;
+    background: #fff;
+    cursor: pointer;
+}
+
+.button.disabled-button{
     border: 2px solid #7d0e0e;
     padding: 10px 39px;
     color: #7d0e0e;
-    text-align: center;
     background-color: black;
     font-weight: bolder;
     cursor:not-allowed;
 }
 
-.dates-button{
+.button.dates-button{
     padding: 10px 0px;
-    text-align: center;
     min-width: 250px;
-    display: inline-block;
     margin: 2% 50% 0 39%;
-}
-
-.btn-success:hover{
-    color: black;
-    background: #fff;
-    cursor: pointer;
 }
 
 .open-wrapper{
@@ -270,33 +284,31 @@ button.disabled-button{
     height: 960px;
 }
 
-
-.item{
+.cd-item{
     width: 550px;    
 }
 
+/*
 .center{
     margin: 0 0;
     width: 635px;
     margin-right: 0px;
-}
+}*/
 
-.top-menu-down{
-    color: #eee;
-    background-color: black;
-    border-bottom: 1px solid #333;
-    margin: -17px 0 0 0;
-    z-index: 2;
-    height: 30px;
-}
+
 
 .is-active{
     color: #ccc !important;
 }
 
-.cds{
+.cds-section{
     position: relative;
     height: 550px;    
+}
+
+.cds-section:after{
+    clear: both;
+    content: '';
 }
 
 .arrow-container{
@@ -307,61 +319,50 @@ button.disabled-button{
     top: 240px;
 }
 
-.left-arrow{
+.arrow{
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    position: relative;
+    top: 15%;
+    -webkit-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;      
+}
+
+.arrow:hover{
+    cursor: pointer;
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+}
+
+.arrow.left-arrow{
     background-image: url("../images/left-arrow.svg");
     float: left;
-    height: 60px;
-    width: 60px;
-    display: inline-block;
-    position: relative;
-    top: 15%;
     left: 1%;
-    -webkit-transition: all 100ms ease-in-out;
-    transition: all 100ms ease-in-out;      
 }
 
-.left-arrow:hover{
-    cursor: pointer;
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);     
-    
-}
-
-.right-arrow{
+.arrow.right-arrow{
     background-image: url("../images/right-arrow.svg");
-    float: right;
-    height: 60px;
-    width: 60px;
-    display: inline-block;
-    position: relative;
-    top: 15%;
+    float: right;  
     right: 1%;
-    -webkit-transition: all 100ms ease-in-out;
-    transition: all 100ms ease-in-out;      
-}
-
-.right-arrow:hover{
-    cursor: pointer;
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);      
 }
 
 .videos-wrapper{
-    height: 600px;
     width: 100%;
+    height: 650px;
     background-color: black;
-    position: relative;
+    display:block;
+}
+.videos-wrapper h1{
+    color: white;
+    font-size: 53px;
+    padding: 3% 43% 2%;
+    display: inline-block;
+    font-weight: 500;
 }
 
-.owl-carousel2{
-    position: relative;
+.owl-carousel .item-video {
+    height: 370px;
 }
 
-.owl-video{
-    height: 200px;
-}
 
-.clearingDiv{
-    clear: both;
-    content: '';
-}
