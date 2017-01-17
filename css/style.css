@@ -5,12 +5,22 @@ body, html {
 }
 
 header{
-    height: 96%;
+    height: 100%;
 }
 .central-panel{
     max-width: 1000px;
     margin: auto;
-    height: 100%;
+    height: inherit;
+    position: relative;
+}
+
+.top-banner{
+    position: absolute;
+    height: 277px;
+    width: 454px;
+    display: block;
+    right: 3%;
+    top: 32%;
 }
 
 .header-wrapper{
@@ -19,17 +29,19 @@ header{
     background: -o-linear-gradient(#fff, #999); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#fff, #999); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#fff, #999); /* Standard syntax */
-    height: 600px;
+    height: inherit;
     font-weight: 700;
+    position: relative;
 }
 
 .top-menu{
     height: 50px;
-    padding: 10px 0;
+    padding: 23px 0;
     position: fixed;
     display: block;
     width: 100%;
     background: inherit;
+    z-index: 1;
     transition: background 200ms, border-bottom 200ms, margin 200ms, height 200ms, background-color 200ms;
     
 }
@@ -74,33 +86,34 @@ header{
 }
 
 .rel-pict{
-    background: url("../images/rels-body.png") no-repeat;
-    background-size: contain;
-    height: 540px;
-    width: 30%;
+    background: url(../images/rels-body.png) no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 293px;
     display: block;
     position: absolute;
-    left: 255px;
-    top: 76px;
+    left: 20%;
+    bottom: 0;
 }
 
 .cd-title{
-    background: url("../images/boys.png") no-repeat;
+background: url(../images/boys.png) no-repeat;
     background-size: contain;
-    height: 540px;
-    width: 30%;
+    height: 66px;
+    width: 82%;
     display: block;
     position: absolute;
-    top: 185px;
-    right: 203px;
+    top: 30px;
+    right: 42px;
 }
 
 .white-line{
-    position: absolute;
-    top: 284px;
-    right: 140px;
+    position: relative;
+    top: 128px;
+    margin: 0 auto;
+    display: block;
     height: 2px;
-    width: 500px;
+    width: 80%;
     background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0) 100%);
     background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 51%,rgba(255,255,255,0) 100%);
     background: linear-gradient(to left, 
@@ -116,32 +129,48 @@ header{
     font-size: 33px;
     font-weight: 300;
     position: absolute;
-    right: 247px;
-    top: 281px;
+    right: 67px;
+    top: 125px;
     letter-spacing: 9px;
+    width: 320px;
+
 }
 
 .header-icons li{
+    
     list-style-type: none;
+    /*
     margin: 15px;
     float: left;
-    position: relative;
-    top: 352px;
-    left: 480px;
+    position: absolute;
+    top: 366px;
+    left: 438px;
+    */
 }
 
 .header-icons li:hover{
     cursor: pointer;
 }
 
+.header-icons{
+    height: 50px;
+    width: 100%;
+    top: 206px;
+    position: absolute;
+}
+
 .sm-buttons{
-    height: 30px;
+    height: 27px;
+    width: 27px;
+    display: inline-block;
+    float: left;
+    margin: 0 5%;
+    position: relative;
+    right: 15px;
     -webkit-filter: drop-shadow( 0px 0px 10px #444);
     filter: drop-shadow( 0px 0px 10px #444);
     -webkit-transition: all 100ms ease-in-out;
     transition: all 100ms ease-in-out;
-    width: 50px;
-    display: inline-block
 }
 
 .sm-buttons:hover{
@@ -149,7 +178,8 @@ header{
     -webkit-transform: translateY(-4px);
     transform: translateY(-4px);    
     -webkit-filter: drop-shadow( 0px 0px 10px #777);
-    filter: drop-shadow( 0px 5px 10px #777);    
+    filter: drop-shadow( 0px 5px 10px #777);   
+    cursor: pointer;
 }
     
 .spotify{
@@ -176,18 +206,12 @@ header{
     background: url("../images/twitter-logo-silhouette.svg") no-repeat;
 }
 
-.tour-wrapper{
-    background-color: black;
-    margin-top: 0;
-    height: 810px;
-    transition: height 400ms ease-in-out;
-}
-
 .list-of-dates{
     height: 580px;
     overflow-y: hidden;
     background-color: black;
     transition: height 400ms ease-in-out;
+    position: relative;    
 }
 
 .list-of-dates li{
@@ -197,22 +221,21 @@ header{
     margin: 25px;
     width: 950px
 }
-
-.tour-wrapper h1{
-    color: white;
-    font-size: 53px;
-    padding-top: 47px;
-    display: inline-block;
-    margin: 0 50% 0 44%;
-    font-weight: 500;
+.black-section{
+    background-color: black;
+    margin-top: 0;
+    height: 810px;
+    transition: height 400ms ease-in-out;
 }
-.tour-wrapper h1{
+.black-section h1{
     color: white;
     font-size: 53px;
     padding-top: 47px;
     display: inline-block;
-    margin: 0 50% 0 44%;
+    margin: 0 auto;
     font-weight: 500;
+    text-align: center;
+    width: 100%;
 }
 
 hr{
@@ -247,8 +270,8 @@ hr{
 }
 
 .button:active{
-outline: none;
-border: none;
+    outline: none;
+    border: none;
 }
 
 .button:focus{
@@ -273,7 +296,8 @@ border: none;
 .button.dates-button{
     padding: 10px 0px;
     min-width: 250px;
-    margin: 2% 50% 0 39%;
+    margin: 2% auto;
+    display: block;
 }
 
 .open-wrapper{
@@ -285,7 +309,25 @@ border: none;
 }
 
 .cd-item{
-    width: 550px;    
+    width: 550px;  
+    position: relative;
+}
+
+.cd-item:hover{
+    cursor: pointer;
+}
+
+.internal-modal{
+    display: inline-block; 
+    height: 550px;
+    width: inherit;
+    position: absolute;
+    bottom: 0px;
+    background-color: transparent;
+    transition: background-color 200ms ease-in-out;
+}
+.open-modal{
+    background-color: rgba(255,2,2,0.5);
 }
 
 /*
@@ -294,8 +336,6 @@ border: none;
     width: 635px;
     margin-right: 0px;
 }*/
-
-
 
 .is-active{
     color: #ccc !important;
@@ -323,10 +363,11 @@ border: none;
     height: 60px;
     width: 60px;
     display: inline-block;
-    position: relative;
-    top: 15%;
+    position: absolute;
+    top: 43%;
     -webkit-transition: all 100ms ease-in-out;
-    transition: all 100ms ease-in-out;      
+    transition: all 100ms ease-in-out;
+    z-index: 1;     
 }
 
 .arrow:hover{
@@ -347,22 +388,211 @@ border: none;
     right: 1%;
 }
 
-.videos-wrapper{
-    width: 100%;
-    height: 650px;
-    background-color: black;
-    display:block;
-}
-.videos-wrapper h1{
-    color: white;
-    font-size: 53px;
-    padding: 3% 43% 2%;
-    display: inline-block;
-    font-weight: 500;
-}
-
 .owl-carousel .item-video {
     height: 370px;
 }
 
+.grey-section{
+    background-color: #ddd;
+    margin-top: 0;
+    height: 810px;
+}
+.grey-section h1{
+    color: black;
+    font-size: 53px;
+    padding-top: 47px;
+    display: inline-block;
+    margin: 0 auto;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+}
 
+.footer-section{
+    height: 80px;
+    background-color: #ddd;
+    margin-top: 0;
+    position: relative;
+    font-size: 12px;
+}
+
+.footer-section a{
+    text-decoration: none;
+    color: black;
+}
+/*
+.footer-section a:after{
+    content: '\2193';
+}*/
+
+.footer-menu{
+    height: 40px;
+    position: relative;
+    margin: 0% auto;
+    max-width: 442px;
+}
+
+.footer-menu ul{
+    margin: 0 3%;
+}
+
+.footer-menu li{
+    list-style-type: none;
+    float: left;
+    padding-right: 9px;
+    padding-top: 17px;
+    display: inline-block;
+    text-align: center;
+}
+
+.footer-menu li:last-of-type{
+    padding-right: 0px;
+
+}
+
+.footer-menu .footer-dot{
+    padding-right: 9px;
+}
+
+.footer-menu a:hover{
+    cursor: pointer;
+}
+
+.footer-section p{
+    text-align: center; 
+    margin-top: 5px;
+}
+
+.footer-section .creator-link-footer{
+    color: #666;
+}
+/*//////////////////////MEDIA QUERIES///////////////////////*/
+
+@media screen and (max-width: 480px) {
+    header {
+        height: 528px;    
+    }
+    
+    .top-banner{
+        right: 13%;
+        top: 46%;
+        width: 353px;
+        margin: 0% auto;
+    }
+    
+    .white-line{
+        width: auto;
+        top: 107px;        
+    }
+    
+    .rel-pict{
+        height: 424px;
+        width: 63%;
+        left: 24%;
+        background-size: auto 100%;
+    }
+    
+    .sm-buttons{
+        margin: 0 4%;
+        height: 24px;
+    }
+    
+    .banner-label{
+        right: 0;
+        left: 54px;
+        top: 109px;
+        font-size: 24px;
+    }
+    
+    .cd-title{
+        right: 24px;
+    }
+    
+    .top-menu.top-menu-down{
+        height: 15px;
+    }
+    
+    .top-menu nav{
+        float: none;
+        margin-right: 0;
+        padding: 0 21%;
+    }
+    
+    .header-icons{
+        top: 163px;
+    }
+    
+    .black-section h1{
+        font-size: 38px;
+    }
+    
+    .date {
+        margin: 0 36px 0 0px;
+    }
+    
+    .list-of-dates{
+        font-size: 12px;
+    }
+    
+    .city {
+        margin: 55px;
+        position: relative;
+        bottom: 1px;
+        left: 20%;
+    }
+    /*
+    .place{
+        left: 4%;
+        position: relative;
+    }*/
+        
+    .button{
+        padding: 9px 12px;
+        margin: 0;
+        position: relative;
+        bottom: 13px;
+        left: 24%;  
+    }  
+    
+    .button.disabled-button{
+        padding: 9px 31px;
+    }
+    
+    hr{
+        top: 5px;
+        width: 435px;
+    }
+    
+    .list-of-dates{
+        height: 470px;;
+    }
+    
+    .list-of-dates ul{
+        padding: 0 6px;
+    }
+    
+    .list-of-dates li{
+        width: 416px;
+        margin: 12px;
+    }
+    
+    .black-section{
+        height: 660px;
+    }
+    
+    .button.dates-button{
+        min-width: 190px;
+        padding: 9px 30px;
+        position: relative;
+        top: 24px;
+        left: 0%;
+    }
+    
+    .open-list {
+        height: 795px;   
+    }
+    
+    .open-wrapper {
+        height: 980px;
+    }
+}

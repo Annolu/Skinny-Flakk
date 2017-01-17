@@ -2,6 +2,8 @@ var buttonViewMore= document.getElementById("dates-button");
 var tourWrapper= document.getElementById("tour-wrapper");
 var listOfDates= document.getElementById("list-of-dates");
 var topMenuTabs=document.getElementById("topMenuTabs");
+var cdList= document.getElementById("owl-demo");
+var cdItem= document.getElementById("cdItem")
 
 // open the "see more dates" tab in the tour section
 
@@ -68,7 +70,7 @@ $(document).ready(function() {
 	})
     
 // video carousel     
-    
+/*    
     $('#owl-carousel-video').owlCarousel({
         items:1,
         nav:true,
@@ -80,7 +82,7 @@ $(document).ready(function() {
                 items:2
             }
         }
-    })
+    })*/
 });
 
 $(window).scroll(function() {  
@@ -88,11 +90,9 @@ $(window).scroll(function() {
     let headerSectionHeight= document.getElementById("headerSection").offsetHeight;
     let tourSectionHeight= document.getElementById("tourSection").offsetHeight;
     let cdSectionHeight= document.getElementById("cdsSection").offsetHeight;
-    let topMenuHeight= document.getElementById("topMenu").offsetHeight-50;    
+    let topMenuHeight= document.getElementById("topMenu").offsetHeight;    
     let distanceFromTop= $(this).scrollTop();    
-    
-    console.log(topMenuHeight)
-       
+           
 //positions at which it shows/hides the fixed top-menu
     
     switch(true){
@@ -128,3 +128,32 @@ function activateTab(tabToActivate){
     }
     tabToActivate.classList.add("is-active");
 }
+
+// cds modals
+
+
+function getModal(e){
+    console.log(e.target);
+    var overLayer = document.createElement("div");
+    overLayer.classList.add("internal-modal","open-modal");
+    e.target.appendChild(overLayer);
+}
+function hideModal(e){
+    var paraBorrar = e.target.getElementsByClassName("open-modal");
+    for (var item of paraBorrar){
+        item.parentNode.removeChild(item);
+    }
+    
+}
+
+for (var item of cdList.children){
+    item.addEventListener("mouseenter", getModal);
+    item.addEventListener("mouseleave", hideModal);
+}
+
+
+
+
+
+
+
