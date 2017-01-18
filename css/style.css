@@ -207,48 +207,48 @@ background: url(../images/boys.png) no-repeat;
 }
 
 .list-of-dates{
-    height: 580px;
+    height: 600px;
     overflow-y: hidden;
     background-color: black;
     transition: height 400ms ease-in-out;
     position: relative;
     width: 100%;
-    top: 17px;
 }
-
+.list-of-dates ul{
+    padding-left:0;
+}
 .list-of-dates li{
     display: inline-block;
     color: #eaeaea;
-    width: 90%;
+    width: 100%;
     margin:0;
-    padding:15px;
     border-bottom: 1px solid #eaeaea;
 }
 .list-of-dates li .location-venue{
-    
+    width:50%;
+    display: inline-block;
 }
 .list-of-dates li span{
     padding: 10px 25px;
     display: inline-block;
-    max-width: 20%;
-    border:1px solid red;
+    margin: 15px;
 }
 .list-of-dates li .date{
     padding-left: 0;
     max-width: 10%;
 }
 .list-of-dates li .place{
-    max-width: 15%;
-    margin-left: 5%;
 }
 .list-of-dates li .city{
-    text-align: right;
-    margin-left: 18%;
+    float:right;
 }
 
 
 .list-of-dates li .button{
     float:right;
+    margin-top:15px;
+    margin-right: 15px;
+    width:120px;
 }
 
 
@@ -307,7 +307,6 @@ hr{
 
 .button.disabled-button{
     border: 2px solid #7d0e0e;
-    padding: 10px 39px;
     color: #7d0e0e;
     background-color: black;
     font-weight: bolder;
@@ -315,9 +314,8 @@ hr{
 }
 
 .button.dates-button{
-    padding: 10px 0px;
     min-width: 250px;
-    margin: 6% auto 0;
+    margin: 3% auto;
     display: block;
 }
 
@@ -487,9 +485,7 @@ hr{
 /*//////////////////////MEDIA QUERIES///////////////////////*/
 
 @media screen and (max-width: 950px) {
-    .list-of-dates li .city{
-        margin-left: 9%;
-    }
+    
     
     .top-menu nav {
         float: none;
@@ -502,23 +498,20 @@ hr{
     }
 }
 
-@media screen and (max-width: 720px) {
-    .list-of-dates li .city {
-        margin-left: 1%;
-        position: relative;
-        top: 12px;
-        right: 41px;
+@media screen and (max-width: 730px) {
+    .list-of-dates li .location-venue span{
+        padding: 0;
+        display: block;
+        margin: 0;
     }
-    
-    .list-of-dates li .place{
-        margin-left: 1%;
-        position: relative;
-        left: 101px;
-        bottom: 11px;
+     .list-of-dates li .location-venue .city{
+        float:left;
     }
-    
-    .list-of-dates li .date{
-        left: 12px;
+    .list-of-dates li .location-venue{
+        width: auto;
+        display: inline-block;
+        position: relative;
+        top: -10px;
     }
 }
 
@@ -575,45 +568,6 @@ hr{
     .header-icons{
         top: 163px;
     }
-
-    
-    .date {
-        margin: 0 0px 0 0px;
-        position: relative;
-        left: 3%;
-        bottom: 11px;
-    }
-    
-    .list-of-dates{
-        font-size: 12px;
-    }
-    
-    .city {
-        margin: 0px;
-        position: relative;
-        top: 58%;
-        right: 13%;
-    }
-    
-    .place {
-        margin: 0px 17px 0 8%;
-        position: relative;
-        bottom: 11px;
-        left: 8%;
-    }
-        
-    .button{
-        padding: 7px 14px;
-        margin: 0;
-        bottom: 6px;
-        right: 7%;
-        font-size: 9px;
-        position: relative;
-    }  
-    
-    .button.disabled-button{
-        padding: 9px 31px;
-    }
     
     hr{
     top: 3px;
@@ -622,22 +576,10 @@ hr{
     margin-left: 0;
     }
     
-    .list-of-dates{
-        width: 97%
-    }
-    
-    .list-of-dates ul{
-        padding: 0 6px;
-        height: 400px;
-    }
-    
-    .list-of-dates li{
-        width: 390px;
-        margin: 12px;
-    }
+   
     
     .black-section{
-        height: 630px;
+       
     }
       
     .black-section h1{
@@ -664,9 +606,7 @@ hr{
         height: 795px;   
     }
     
-    .open-wrapper {
-        height: 980px;
-    }
+ 
     
     .footer-menu{
         width: 387px;
@@ -674,5 +614,19 @@ hr{
     
     .footer-menu ul{
         padding-left: 5%;
+    }
+    .list-of-dates{
+    }
+    .list-of-dates li{
+        font-size: 12px;
+        padding: 10px 0;
+    }
+    .list-of-dates li .button {
+        margin-top: 5px;
+    }
+    .list-of-dates li .date {
+        padding: 0;
+        margin-left: 5px;
+        max-width: 10%;
     }
 }
