@@ -63,7 +63,7 @@ $(document).ready(function() {
 	    var $target = $(target);        
 
 	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
+	        'scrollTop': $target.offset().top - 40
 	    }, 900, 'swing', function () {
 	        window.location.hash = target;
 	    });
@@ -87,12 +87,15 @@ $(document).ready(function() {
 
 $(window).scroll(function() {  
     
-    let headerSectionHeight= document.getElementById("headerSection").offsetHeight;
+    let topMenuHeight= document.getElementById("topMenu").offsetHeight;
+    let headerSectionHeight= document.getElementById("headerSection").offsetHeight - 50;
     let tourSectionHeight= document.getElementById("tourSection").offsetHeight;
     let cdSectionHeight= document.getElementById("cdsSection").offsetHeight;
-    let topMenuHeight= document.getElementById("topMenu").offsetHeight;    
+    let shopSection= document.getElementById("shopSection").offsetHeight;
+    let footerSection= document.getElementById("footerSection").offsetHeight;
     let distanceFromTop= $(this).scrollTop();    
-           
+    let totalHeight= $(document).height()
+        
 //positions at which it shows/hides the fixed top-menu
     
     switch(true){
@@ -104,7 +107,7 @@ $(window).scroll(function() {
             $('.top-menu').addClass('top-menu-down');
             break;
     }
-    
+        
 //positions at which the top-menu tabs change colour  
     
     switch(true){
@@ -114,7 +117,12 @@ $(window).scroll(function() {
         case (distanceFromTop<headerSectionHeight+tourSectionHeight &&                              distanceFromTop>headerSectionHeight):
             activateTab(topMenuTabs.children[1].children[0]);
             break;
-        case (distanceFromTop>tourSectionHeight+headerSectionHeight):
+        case (distanceFromTop<totalHeight-shopSection-footerSection && distanceFromTop>headerSectionHeight+tourSectionHeight):
+            for (var item of topMenuTabs.children){
+                item.children[0].classList.remove("is-active");
+            }
+            break;
+        case (distanceFromTop>totalHeight-shopSection-footerSection):
             activateTab(topMenuTabs.children[2].children[0]);
             break;
     }
@@ -133,7 +141,6 @@ function activateTab(tabToActivate){
 
 
 function getModal(e){
-    console.log(e.target);
     var overLayer = document.createElement("div");
     overLayer.classList.add("internal-modal","open-modal");
     e.target.appendChild(overLayer);
@@ -143,17 +150,10 @@ function hideModal(e){
     for (var item of paraBorrar){
         item.parentNode.removeChild(item);
     }
-    
 }
 
 for (var item of cdList.children){
     item.addEventListener("mouseenter", getModal);
     item.addEventListener("mouseleave", hideModal);
 }
-
-
-
-
-
-
 
