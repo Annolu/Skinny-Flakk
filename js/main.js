@@ -101,7 +101,7 @@ $(window).scroll(function() {
     switch(true){
         case (distanceFromTop<topMenuHeight):
             $('.top-menu').removeClass('top-menu-down');            
-            topMenuTabs.children[0].children[0].classList.remove("is-active");
+            topMenuTabs.children[0].classList.remove("is-active");
             break;   
         case (distanceFromTop>topMenuHeight):
             $('.top-menu').addClass('top-menu-down');
@@ -112,18 +112,18 @@ $(window).scroll(function() {
     
     switch(true){
         case (distanceFromTop>topMenuHeight && distanceFromTop<headerSectionHeight):
-            activateTab(topMenuTabs.children[0].children[0]);
+            activateTab(topMenuTabs.children[0]);
             break;
         case (distanceFromTop<headerSectionHeight+tourSectionHeight &&                              distanceFromTop>headerSectionHeight):
-            activateTab(topMenuTabs.children[1].children[0]);
+            activateTab(topMenuTabs.children[1]);
             break;
         case (distanceFromTop<totalHeight-shopSection-footerSection && distanceFromTop>headerSectionHeight+tourSectionHeight):
             for (var item of topMenuTabs.children){
-                item.children[0].classList.remove("is-active");
+                item.classList.remove("is-active");
             }
             break;
         case (distanceFromTop>totalHeight-shopSection-footerSection):
-            activateTab(topMenuTabs.children[2].children[0]);
+            activateTab(topMenuTabs.children[2]);
             break;
     }
 });
@@ -132,7 +132,7 @@ $(window).scroll(function() {
 
 function activateTab(tabToActivate){
     for (var item of topMenuTabs.children){
-        item.children[0].classList.remove("is-active");
+        item.classList.remove("is-active");
     }
     tabToActivate.classList.add("is-active");
 }

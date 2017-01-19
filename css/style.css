@@ -45,26 +45,26 @@ header{
     transition: background 200ms, border-bottom 200ms, margin 200ms, height 200ms, background-color 200ms;
     
 }
+
+/*
 .top-menu nav{
     float:right;
     margin-right: 180px;   
     position: relative;
     bottom: 2px;
-}
+}*/
 
-.top-menu li{
-    list-style-type: none;
-    float: left;
-    padding-left: 25px;
-    display: inline-block;
-    font-size: 15px;
-    transition: color 400ms;
+.top-menu-tabs{
+    text-align: center;
+    position: relative;
+
 }
 
 .top-menu a{
     text-decoration: none;
     color: #666;
     font-weight: bold;
+    margin: 0 10px;
 }
 
 .top-menu a:hover{
@@ -414,7 +414,6 @@ hr{
 .grey-section{
     background-color: #ddd;
     margin-top: 0;
-    height: 810px;
     height: 650px;
 }
 .grey-section h1{
@@ -429,23 +428,30 @@ hr{
 }
 
 .footer-section{
-    height: 80px;
+    height: auto;
     background-color: #ddd;
     margin-top: 0;
     position: relative;
     font-size: 12px;
+    text-align: center;
+    margin-bottom: 0;
+    display: inline-block; 
+    width: 100%;
 }
 
 .footer-section a{
     text-decoration: none;
     color: black;
+    padding-bottom: 8px;
+    display: inline-block;
 }
 
 .footer-menu{
-    height: 40px;
+    min-height: 15px;
     position: relative;
     margin: 0% auto;
-    max-width: 442px;
+    padding: 21px 10px 0 10px;
+    width: auto;
 }
 
 .footer-menu ul{
@@ -467,25 +473,24 @@ hr{
 }
 
 .footer-menu .footer-dot{
-    padding-right: 9px;
+    padding: 0 9px;
 }
 
 .footer-menu a:hover{
     cursor: pointer;
-}
-
-.footer-section p{
-    text-align: center; 
-    margin-top: 5px;
+    color: #666;
 }
 
 .footer-section .creator-link-footer{
     color: #666;
 }
+
+.footer-section .creator-link-footer:hover{
+    color: black;
+}
 /*//////////////////////MEDIA QUERIES///////////////////////*/
 
 @media screen and (max-width: 950px) {
-    
     
     .top-menu nav {
         float: none;
@@ -554,15 +559,14 @@ hr{
     .cd-title{
         right: 24px;
     }
+      
+    
+    .top-menu-tabs{
+        bottom: 5px;
+    }
     
     .top-menu.top-menu-down{
         height: 15px;
-    }
-    
-    .top-menu nav{
-        float: none;
-        margin-right: 0;
-        padding: 0 21%;
     }
     
     .header-icons{
@@ -570,28 +574,14 @@ hr{
     }
     
     hr{
-    top: 3px;
-    width: 98%;
-    margin-right: 0;
-    margin-left: 0;
-    }
-    
-   
-    
-    .black-section{
-       
-    }
-      
-    .black-section h1{
-        font-size: 38px;
+        top: 3px;
+        width: 98%;
+        margin-right: 0;
+        margin-left: 0;
     }
     
     .grey-section{
         height: 520px;
-    }
-      
-    .grey-section h1{
-        font-size: 38px;
     }
     
     .button.dates-button{
@@ -608,6 +598,10 @@ hr{
     
     .footer-menu{
         width: 387px;
+    }
+    
+    .open-wrapper {
+        height: 1007px;
     }
     
     .footer-menu ul{
