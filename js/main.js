@@ -28,11 +28,14 @@ $(document).ready(function() {
     var owl = $("#owl-demo");
 
     owl.owlCarousel({
-        center: true,
         items:2,
         loop:true,
         dots:false,
         autoWidth:true,
+
+        
+
+
         responsive:{
             600:{
                 items:2
@@ -70,19 +73,23 @@ $(document).ready(function() {
 	})
     
 // video carousel     
-/*    
-    $('#owl-carousel-video').owlCarousel({
-        items:1,
-        nav:true,
-        center: true,
+     $('.owl-carousel').owlCarousel({
+        items:2,
+        merge:true,
         loop:true,
+        margin:20,
         video:true,
+        lazyLoad:true,
+        center:true,
         responsive:{
-            600:{
+            480:{
                 items:2
+            },
+            600:{
+                items:4
             }
         }
-    })*/
+    })
 });
 
 $(window).scroll(function() {  
