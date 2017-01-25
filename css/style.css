@@ -214,8 +214,12 @@ header{
 .black-section{
     background-color: black;
     margin-top: 0;
-    height: 590px;
+    height: 100%;
     transition: height 400ms ease-in-out;
+}
+
+.black-section.tour{
+    height: 590px;
 }
 
 .black-section.open-wrapper{
