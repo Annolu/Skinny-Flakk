@@ -89,11 +89,10 @@ header{
 .rel-pict{
     background: url(../images/rels-body.png) no-repeat;
     background-size: cover;
-    height: 500px;
-    width: 293px;
+    height: 80%;
+    width: 45%;
     display: block;
     position: absolute;
-    left: 20%;
     bottom: 0;
 }
 
@@ -565,7 +564,10 @@ color: black;
         width: 250px;
         margin: 0 auto;
     }
-    
+    .rel-pict{
+        height: 85%;
+        width: 65%;
+    }
 }
 @media screen and (max-width: 730px) {
 
@@ -599,6 +601,12 @@ color: black;
         display: none;
     }
     
+    .rel-pict{
+        height: 80%;
+        width: 93%;
+        left: 6%;
+    }
+     
 }
 
 @media screen and (max-width: 480px) {
@@ -609,12 +617,13 @@ color: black;
     .white-line{
         top:30px; 
     }
-    
     .rel-pict{
-        height: 424px;
-        width: 63%;
-        background-size: auto 100%;
+        position: absolute;
+        height: 84%;
+        width: 65%;
+        left: 17%;
     }
+    
     
     .sm-buttons{
     }
