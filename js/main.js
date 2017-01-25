@@ -7,6 +7,12 @@ var cdItem= document.getElementById("cdItem")
 
 // open the "see more dates" tab in the tour section
 
+if(listOfDates.children[0].children.length>=5){
+    buttonViewMore.classList.remove("hide-button");
+}
+
+console.log(listOfDates.children[0].children.length>5);
+
 buttonViewMore.addEventListener("click", openConcerts)
 
 function openConcerts(){

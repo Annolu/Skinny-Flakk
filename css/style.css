@@ -211,23 +211,52 @@ header{
     background: url("../images/twitter-logo-silhouette.svg") no-repeat;
 }
 
-.list-of-dates{
-    height: 600px;
-    overflow-y: hidden;
+.black-section{
     background-color: black;
+    margin-top: 0;
+    height: 590px;
     transition: height 400ms ease-in-out;
-    position: relative;
+}
+
+.black-section.open-wrapper{
+    height: 100%;
+}
+
+.black-section h1{
+    color: white;
+    font-size: 53px;
+    padding-top: 47px;
+    display: inline-block;
+    margin: 0 auto;
+    font-weight: 500;
+    text-align: center;
     width: 100%;
 }
+
+.list-of-dates{
+    height: 375px;
+    overflow-y: hidden;
+    background-color: black;
+    position: relative;
+    width: 100%;
+    transition: height 400ms ease-in-out;
+}
+
+.list-of-dates.open-list{
+    height: 100%;
+}
+
 .list-of-dates ul{
     padding-left:0;
 }
+
 .list-of-dates li{
     display: inline-block;
     color: #eaeaea;
     width: 100%;
     margin:0;
     border-bottom: 1px solid #eaeaea;
+    height: 70px;
 }
 .list-of-dates li .location-venue{
     width:50%;
@@ -242,36 +271,19 @@ header{
     padding-left: 0;
     max-width: 10%;
 }
+
 .list-of-dates li .place{
 }
+
 .list-of-dates li .city{
     float:right;
 }
-
 
 .list-of-dates li .button{
     float:right;
     margin-top:15px;
     margin-right: 15px;
-    width:120px;
-}
-
-
-.black-section{
-    background-color: black;
-    margin-top: 0;
-    height: 815px;
-    transition: height 400ms ease-in-out;
-}
-.black-section h1{
-    color: white;
-    font-size: 53px;
-    padding-top: 47px;
-    display: inline-block;
-    margin: 0 auto;
-    font-weight: 500;
-    text-align: center;
-    width: 100%;
+    width: 120px;
 }
 
 hr{
@@ -338,12 +350,8 @@ color: black;
     display: block;
 }
 
-.open-wrapper{
-    height: 1111px;
-}
-
-.open-list{
-    height: 878px;
+.button.hide-button{
+    display: none;
 }
 
 .cd-item{
@@ -767,11 +775,7 @@ color: black;
     }
     
     .button.dates-button{
-        min-width: 190px;
-        padding: 9px 30px;
-        position: relative;
-        top: 24px;
-        left: 0%;
+        margin: 7% auto;
     }
     
     .open-list {
@@ -786,10 +790,12 @@ color: black;
         padding-left: 5%;
     }
     .list-of-dates{
+        height: 340px;
     }
     .list-of-dates li{
         font-size: 12px;
         padding: 10px 0;
+        height: 45px;
     }
     .list-of-dates li .button {
         margin-top: 5px;
@@ -799,8 +805,13 @@ color: black;
         margin-left: 5px;
         max-width: 10%;
     }
+
    .album-info {
         padding: 8% 0;
+    }
+    
+    .black-section{
+        height: 540px;
     }
     
 }
