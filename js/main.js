@@ -118,7 +118,7 @@ $(window).scroll(function() {
         case (distanceFromTop>topMenuHeight && distanceFromTop<headerSectionHeight):
             activateTab(topMenuTabs.children[0]);
             break;
-        case (distanceFromTop<headerSectionHeight+tourSectionHeight &&                              distanceFromTop>headerSectionHeight):
+        case (distanceFromTop<headerSectionHeight+tourSectionHeight && distanceFromTop>headerSectionHeight):
             activateTab(topMenuTabs.children[1]);
             break;
         case (distanceFromTop<totalHeight-shopSection-footerSection && distanceFromTop>headerSectionHeight+tourSectionHeight):
