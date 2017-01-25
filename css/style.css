@@ -69,7 +69,11 @@ header{
 }
 
 .top-menu a:hover{
-    color: #eee; 
+    color: #aaa; 
+}
+
+.reverse-hover:hover{
+    color: #999;
 }
 
 .top-menu:after{
@@ -84,6 +88,10 @@ header{
     margin: -17px 0 0 0;
     z-index: 2;
     height: 30px;
+}
+
+.top-menu.top-menu-down .top-menu-tabs a:hover{
+    color: #ccc; 
 }
 
 .rel-pict{
