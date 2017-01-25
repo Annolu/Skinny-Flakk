@@ -580,7 +580,7 @@ color: black;
     -webkit-transition: opacity .5s ease-in-out;
     transition: opacity .5s ease-in-out;
     vertical-align: middle;
-    background-color: rgba(204, 51, 102,.7);
+    background-color: rgba(45, 141, 245, 0.7);
 }
 .album-info p {
     color: #fff;
@@ -628,7 +628,7 @@ color: black;
     text-decoration: none;
 }
 .album-info ul.list-inline li a:hover {
-    color: #da0000;
+    color: rgba(45, 141, 245, 1);
     background-color: #fff;
     text-decoration: none;
     -webkit-transition: all .5s ease-in-out;
