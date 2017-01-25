@@ -282,8 +282,6 @@ hr{
     top: 15px;
 }
 
-
-
 .button{   
     border: 2px solid #eaeaea;
     padding: 10px 21px;
@@ -302,6 +300,22 @@ hr{
 
 .button:focus{
     outline:0;
+}
+
+.button.button-reverse{
+color: black;
+    background-color: white;
+    min-width: 250px;
+    margin: 4% auto 0%;
+    display: block;
+    border: 1px solid black;
+    transition: all 200ms ease-in-out;
+}
+
+.button.button-reverse:hover{
+    color: #eaeaea;
+    background-color: black;
+    cursor: pointer;
 }
 
 .button.button-success:hover{
@@ -419,19 +433,64 @@ hr{
 .grey-section{
     background-color: #ddd;
     margin-top: 0;
-    height: 650px;
+    height: auto;
 }
+
 .grey-section h1{
     color: black;
     font-size: 53px;
     padding-top: 47px;
     display: inline-block;
     margin: 0 auto;
+    margin-bottom: 40px;
     font-weight: 500;
     text-align: center;
     width: 100%;
 }
 
+.shop-container{
+    background: white;
+    height: auto;
+    padding: 5%;
+}
+
+.shop-container:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.shop-container .shop-items > *{
+    margin-bottom: 5%;
+    margin-top: 0%;
+}
+
+.shop-container .shop-items .name-item{
+    text-align: center;
+}
+
+.shop-container .shop-items .price-item{
+    text-align: center;
+    color: #b0486b;
+}
+
+
+.clearing-div{
+    clear: both;
+    content: '';
+    height: 0;
+}
+
+.shop-container .shop-items{
+    max-width: 23%;
+    float: left;
+    margin: 0 1%;
+}
+
+.shop-container .shop-items img{
+    width: 100%;
+
+}
 .footer-section{
     height: auto;
     background-color: #ddd;
@@ -506,9 +565,11 @@ hr{
         width: 250px;
         margin: 0 auto;
     }
+    
 }
-
 @media screen and (max-width: 730px) {
+
+    
     .list-of-dates li .location-venue span{
         padding: 0;
         display: block;
@@ -528,14 +589,22 @@ hr{
         width: 350px;
         right:auto;
     }
+    
+        .shop-container .shop-items {
+        max-width: 40%;
+        margin: 0 5%;
+    }
+    
+    .shop-container .shop-items:nth-child(n+5){
+        display: none;
+    }
+    
 }
 
 @media screen and (max-width: 480px) {
     header {
         height: 528px;    
     }
-    
-
     
     .white-line{
         top:30px; 
@@ -554,13 +623,8 @@ hr{
         font-size: 24px;
         top: 25px;
         font-weight:400;
+    }
 
-    }
-    
-    .cd-title{
-        
-    }
-      
     
     .top-menu-tabs{
         bottom: 5px;
@@ -601,10 +665,6 @@ hr{
         height: 795px;   
     }
     
-    .footer-menu{
-        width: 387px;
-    }
-    
     .open-wrapper {
         height: 1007px;
     }
@@ -626,4 +686,7 @@ hr{
         margin-left: 5px;
         max-width: 10%;
     }
+    
+    z
+    
 }
