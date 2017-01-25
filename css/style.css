@@ -215,11 +215,10 @@ header{
     background-color: black;
     margin-top: 0;
     height: 100%;
-    transition: height 400ms ease-in-out;
+    
 }
 
 .black-section.tour{
-    height: 590px;
 }
 
 .black-section.open-wrapper{
@@ -238,12 +237,12 @@ header{
 }
 
 .list-of-dates{
-    height: 375px;
+    height: 100%;
     overflow-y: hidden;
     background-color: black;
     position: relative;
     width: 100%;
-    transition: height 400ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 
 .list-of-dates.open-list{
@@ -363,10 +362,6 @@ color: black;
     position: relative;
 }
 
-.cd-item:hover{
-    cursor: pointer;
-}
-
 .internal-modal{
     display: inline-block; 
     height: 550px;
@@ -393,7 +388,6 @@ color: black;
 
 .cds-section{
     position: relative;
-    height: 650px;    
 }
 
 .cds-section:after{
@@ -410,36 +404,41 @@ color: black;
 }
 
 .arrow{
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 50px;
     display: inline-block;
     position: absolute;
     top: 43%;
     -webkit-transition: all 100ms ease-in-out;
     transition: all 100ms ease-in-out;
-    z-index: 1;     
+    z-index: 1;
+    opacity:.7;    
 }
 
 .arrow:hover{
     cursor: pointer;
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
+    opacity:1;
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
 }
 
 .arrow.left-arrow{
     background-image: url("../images/left-arrow.svg");
     float: left;
-    left: 1%;
+    left: 0;
 }
 
 .arrow.right-arrow{
     background-image: url("../images/right-arrow.svg");
     float: right;  
-    right: 1%;
+    right: 0;
 }
 
 .owl-carousel .item-video {
-    height: 580px;
+    height: 500px;
+}
+.owl-theme .owl-dots {
+    padding: 0 0 30px 0;
 }
 
 .grey-section{
@@ -593,6 +592,7 @@ color: black;
     transition: opacity .5s ease-in-out;
     vertical-align: middle;
     background-color: rgba(45, 141, 245, 0.7);
+    border-left:2px solid white;
 }
 .album-info p {
     color: #fff;
@@ -697,6 +697,14 @@ color: black;
         max-width: 40%;
         margin: 0 5%;
     }
+    .cd-item .album-info {
+        opacity: 1;
+        -webkit-transition: opacity .5s ease-in-out;
+        transition: opacity .5s ease-in-out;
+    }
+    .cd-item{
+        width: 500px;
+    }
     
     /*
     
@@ -706,8 +714,8 @@ color: black;
     
     .rel-pict{
         height: 80%;
-        width: 72%;
-        left: 20%;
+        width: 90%;
+        left: 10%;
     }
     .album-info ul.list-inline li {
         margin: 10px auto;
@@ -794,13 +802,12 @@ color: black;
         padding-left: 5%;
     }
     .list-of-dates{
-        height: 340px;
     }
+    
     .list-of-dates li{
-        font-size: 12px;
-        padding: 10px 0;
-        height: 45px;
+        font-size: 13px;
     }
+    /*
     .list-of-dates li .button {
         margin-top: 5px;
     }
@@ -809,13 +816,13 @@ color: black;
         margin-left: 5px;
         max-width: 10%;
     }
+    */
 
    .album-info {
         padding: 8% 0;
     }
-    
-    .black-section{
-        height: 540px;
+    .owl-carousel .item-video {
+        height: 330px;
     }
     
 }

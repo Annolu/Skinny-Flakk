@@ -3,7 +3,7 @@ var tourWrapper= document.getElementById("tour-wrapper");
 var listOfDates= document.getElementById("list-of-dates");
 var topMenuTabs=document.getElementById("topMenuTabs");
 var cdList= document.getElementById("owl-demo");
-var cdItem= document.getElementById("cdItem")
+var cdItem= document.getElementById("cdItem");
 
 // open the "see more dates" tab in the tour section
 
@@ -13,19 +13,24 @@ if(listOfDates.children[0].children.length>=5){
 
 console.log(listOfDates.children[0].children.length>5);
 
-buttonViewMore.addEventListener("click", openConcerts)
+
+
+
+var blackBoxHeight = listOfDates.clientHeight;
+var initHeight = "375px";
+
+listOfDates.style.height = initHeight;
+
+buttonViewMore.addEventListener("click", openConcerts);
 
 function openConcerts(){
-    
-    if(tourWrapper.classList.contains("open-wrapper")){
-        tourWrapper.classList.remove("open-wrapper");
-        listOfDates.classList.remove("open-list");
-        buttonViewMore.innerHTML= "VER TODAS LAS FECHAS";
-        
-    }else{
-        tourWrapper.classList.add("open-wrapper");
-        listOfDates.classList.add("open-list");
+    if (listOfDates.style.height === initHeight){
+        listOfDates.style.height = blackBoxHeight+"px";
         buttonViewMore.innerHTML= "VER MENOS FECHAS";
+    }
+    else{
+        listOfDates.style.height = initHeight;
+        buttonViewMore.innerHTML= "VER TODAS LAS FECHAS";
     }
 }
 
