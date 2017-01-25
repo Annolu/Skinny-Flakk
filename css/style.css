@@ -460,6 +460,17 @@ color: black;
     clear: both;
 }
 
+.shop-container .shop-items{
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,.0);
+    transition: border 150ms ease-in-out;
+}
+
+.shop-container .shop-items:hover{
+    border: 1px solid rgba(0,0,0,.2);
+    cursor: pointer;
+}
+
 .shop-container .shop-items > *{
     margin-bottom: 5%;
     margin-top: 0%;
@@ -578,16 +589,19 @@ color: black;
         display: block;
         margin: 0;
     }
-     .list-of-dates li .location-venue .city{
+    
+    .list-of-dates li .location-venue .city{
         float:left;
     }
+    
     .list-of-dates li .location-venue{
         width: auto;
         display: inline-block;
         position: relative;
         top: -10px;
     }
-     .top-banner{
+    
+    .top-banner{
         position:relative;
         width: 350px;
         right:auto;
@@ -598,16 +612,17 @@ color: black;
         margin: 0 5%;
     }
     
+    /*
+    
     .shop-container .shop-items:nth-child(n+5){
         display: none;
-    }
+    }*/
     
     .rel-pict{
         height: 80%;
         width: 72%;
         left: 20%;
     }
-     
 }
 
 @media screen and (max-width: 480px) {
@@ -625,7 +640,6 @@ color: black;
         width: 78%;
         left: 12%;
     }
-    
     
     .sm-buttons{
     }
@@ -661,7 +675,11 @@ color: black;
     }
     
     .grey-section{
-        height: 520px;
+        height: auto;
+    }
+    
+    .button.button-reverse{
+        margin: 8% auto 3%;
     }
     
     .button.dates-button{
