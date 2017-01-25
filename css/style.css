@@ -88,12 +88,13 @@ header{
 
 .rel-pict{
     background: url(../images/rels-body.png) no-repeat;
-    background-size: cover;
+    background-size: contain;
     height: 80%;
     width: 45%;
     display: block;
     position: absolute;
     bottom: 0;
+    left:5%;
 }
 
 .cd-title{
@@ -156,8 +157,8 @@ header{
     *display:inline; /*IE7*/
     *zoom:1; /*IE7*/
     
-    margin-right: 15px;
-    margin-left: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
    
 }
 
@@ -603,8 +604,8 @@ color: black;
     
     .rel-pict{
         height: 80%;
-        width: 93%;
-        left: 6%;
+        width: 72%;
+        left: 20%;
     }
      
 }
@@ -620,8 +621,9 @@ color: black;
     .rel-pict{
         position: absolute;
         height: 84%;
-        width: 65%;
-        left: 17%;
+
+        width: 78%;
+        left: 12%;
     }
     
     
@@ -647,8 +649,8 @@ color: black;
     }
 
     .header-icons li{
-        margin-right: 10px;
-        margin-left: 10px;
+        margin-right: 5px;
+        margin-left: 5px;
     }
     
     hr{
