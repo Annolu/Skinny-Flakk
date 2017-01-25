@@ -32,10 +32,7 @@ $(document).ready(function() {
         loop:true,
         dots:false,
         autoWidth:true,
-
-        
-
-
+        center:true,
         responsive:{
             600:{
                 items:2
@@ -146,7 +143,7 @@ function activateTab(tabToActivate){
 
 // cds modals
 
-
+/*
 function getModal(e){
     var overLayer = document.createElement("div");
     overLayer.classList.add("internal-modal","open-modal");
@@ -163,4 +160,4 @@ for (var item of cdList.children){
     item.addEventListener("mouseenter", getModal);
     item.addEventListener("mouseleave", hideModal);
 }
-
+*/
