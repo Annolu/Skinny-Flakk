@@ -97,8 +97,8 @@ header{
 .rel-pict{
     background: url(../images/rels-body.png) no-repeat;
     background-size: contain;
-    height: 80%;
-    width: 45%;
+    height: 685px;
+    width: 400px;
     display: block;
     position: absolute;
     bottom: 0;
@@ -481,13 +481,14 @@ color: black;
 
 .shop-container .shop-items{
     box-sizing: border-box;
-    border: 1px solid rgba(0,0,0,.0);
-    transition: border 150ms ease-in-out;
+    border: 2px solid rgba(0,0,0,.0);
+    transition: border 250ms ease-in-out;
 }
 
 .shop-container .shop-items:hover{
-    border: 1px solid rgba(0,0,0,.2);
+    border: 2px solid rgba(0,0,0,.2);
     cursor: pointer;
+    background-color: rgba(221,221,221,.2);
 }
 
 .shop-container .shop-items > *{
@@ -501,7 +502,8 @@ color: black;
 
 .shop-container .shop-items .price-item{
     text-align: center;
-    color: #b0486b;
+    color: #b1b1b1;
+    font-size:20px;
 }
 
 
@@ -672,7 +674,7 @@ color: black;
     }
     .rel-pict{
         height: 85%;
-        width: 65%;
+        width: 90%;
     }
 }
 @media screen and (max-width: 730px) {
@@ -779,13 +781,7 @@ color: black;
         margin-left: 5px;
     }
     
-    hr{
-        top: 3px;
-        width: 98%;
-        margin-right: 0;
-        margin-left: 0;
-    }
-    
+       
     .grey-section{
         height: auto;
     }
