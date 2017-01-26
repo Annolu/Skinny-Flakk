@@ -19,7 +19,7 @@ header{
     height: 277px;
     width: 454px;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
     top:33%;
     right:0;
 }
@@ -97,8 +97,8 @@ header{
 .rel-pict{
     background: url(../images/rels-body.png) no-repeat;
     background-size: contain;
-    height: 685px;
-    width: 400px;
+    height: 80%;
+    width: 45%;
     display: block;
     position: absolute;
     bottom: 0;

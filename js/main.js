@@ -151,24 +151,3 @@ function activateTab(tabToActivate){
     }
     tabToActivate.classList.add("is-active");
 }
-
-// cds modals
-
-/*
-function getModal(e){
-    var overLayer = document.createElement("div");
-    overLayer.classList.add("internal-modal","open-modal");
-    e.target.appendChild(overLayer);
-}
-function hideModal(e){
-    var paraBorrar = e.target.getElementsByClassName("open-modal");
-    for (var item of paraBorrar){
-        item.parentNode.removeChild(item);
-    }
-}
-
-for (var item of cdList.children){
-    item.addEventListener("mouseenter", getModal);
-    item.addEventListener("mouseleave", hideModal);
-}
-*/
