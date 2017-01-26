@@ -47,14 +47,6 @@ header{
     
 }
 
-/*
-.top-menu nav{
-    float:right;
-    margin-right: 180px;   
-    position: relative;
-    bottom: 2px;
-}*/
-
 .top-menu-tabs{
     text-align: center;
     position: relative;
@@ -173,8 +165,6 @@ header{
 .header-icons li:hover{
     cursor: pointer;
 }
-
-
 
 .sm-buttons{
     height: 27px;
@@ -382,13 +372,6 @@ color: black;
 .open-modal{
     background-color: rgba(255,2,2,0.5);
 }
-
-/*
-.center{
-    margin: 0 0;
-    width: 635px;
-    margin-right: 0px;
-}*/
 
 .is-active{
     color: #ccc !important;
@@ -701,6 +684,7 @@ color: black;
         position:relative;
         width: 350px;
         right:auto;
+        top:45%;
     }
     
     .shop-container .shop-items {
@@ -715,13 +699,6 @@ color: black;
     .cd-item{
         width: 500px;
     }
-    
-    /*
-    
-    .shop-container .shop-items:nth-child(n+5){
-        display: none;
-    }*/
-    
     .rel-pict{
         height: 80%;
         width: 90%;
@@ -739,6 +716,14 @@ color: black;
      
 }
 
+/* MALDITOS HEIGHT IN LANDSCAPE   */
+@media  screen and (max-height: 400px) {
+    .top-banner {
+        top: 15%;
+    }
+}
+
+
 @media screen and (max-width: 480px) {
     header {
         height: 528px;    
@@ -753,9 +738,6 @@ color: black;
 
         width: 78%;
         left: 12%;
-    }
-    
-    .sm-buttons{
     }
     
     .banner-label{
@@ -780,7 +762,6 @@ color: black;
         margin-right: 5px;
         margin-left: 5px;
     }
-    
        
     .grey-section{
         height: auto;
@@ -805,22 +786,9 @@ color: black;
     .footer-menu ul{
         padding-left: 5%;
     }
-    .list-of-dates{
-    }
-    
     .list-of-dates li{
         font-size: 13px;
     }
-    /*
-    .list-of-dates li .button {
-        margin-top: 5px;
-    }
-    .list-of-dates li .date {
-        padding: 0;
-        margin-left: 5px;
-        max-width: 10%;
-    }
-    */
 
    .album-info {
         padding: 8% 0;
